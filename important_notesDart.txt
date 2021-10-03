@@ -1,7 +1,0 @@
-compile to exe 
-dart compile exe filename.dart
-
-unicode to print special characters in screen
-https://unicode.org/emoji/charts/full-emoji-list.html
-
-https://unicode-table.com/en/blocks/
