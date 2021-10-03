@@ -4,7 +4,7 @@
  - git status   // See what is added or modified in local Drive
  - git add .    // Staging to commit
  - git commit -m "msg title" -m "msg body"  // Saving the files Locally (in pc drives).
-- git push origin `branch name`
+ - git push origin `branch name`
 
 Connect to a remote github repo--
  - git remote   // to check if it is connected to github remote repository
