@@ -16,8 +16,9 @@ Connect to a remote github repo--
  - To switch between branches: git checkout ~branch name~
  - To merge branches together: git merge ~branch name~
  
-
 ## Contents
  ### Core concepts
  1. printing
  2. variables
+
+/////In the new branch /////
