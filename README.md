@@ -55,5 +55,4 @@ Connect to a remote github repo--
 5. Fibonacci series
 6. Fahrenheit to celcious, Celcious to fahrenheit
 7. Number guessing game
-8. rock paper sissor game
-
+8. rock paper sissor Game
