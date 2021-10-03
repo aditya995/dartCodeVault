@@ -12,9 +12,11 @@ Connect to a remote github repo--
 // To add the origin for this folder to push to that (remote) dartCodeVault repo in github.com
 
  - git branch   // Check the current branch
- - To create a new branch: git checkout -b ~branch name~
- - To switch between branches: git checkout ~branch name~
- - To merge branches together: git merge ~branch name~
+ - git checkout -b ~branch name~    //To create a new branch
+ - git checkout ~branch name~   //To switch between branches
+ - git merge ~branch name~  //To merge branches together
+ - git branch -d ~branch_name~  //To delete branch (might show ~branch_name~ is not fully merged). [ Safe delete ]
+ - git branch -D ~branch_name~  //To delete forcefully.
  
 ## Contents
  ### Core concepts
