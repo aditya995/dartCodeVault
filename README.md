@@ -31,7 +31,7 @@ Connect to a remote github repo--
  6. tostring(), todouble, toint()
  7. double precision (to n decimal places)
  8. printing with variables and using operators
- 9. Take input(String, integer, double, ///bool/// )
+ 9. Take input(String, integer, double)
  10. operators(+, -, / (assigning divided result in int variable), *),
  11. constant, final, dynamic, var,
  12. Special character (constants in dart),
