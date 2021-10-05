@@ -5,6 +5,7 @@
  - git commit -m "msg title" -m "msg body"  // Saving the files Locally (in pc drives).
  - git push -u origin **branch_name** // Setting the default branch for `git push` command
  - git push    // `(pushes to default branch)`// If origin and branch is set through previous command!
+ - git push --force  // If rejected `git push` for fast-forwards
  - git push origin **branch_name**  // `(manually)` // usually **`main`** (**`master` in previous versions**).
 
 Connect to a remote github repo--
