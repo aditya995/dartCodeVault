@@ -8,6 +8,10 @@
  - git push --force  // If rejected `git push` for fast-forwards
  - git push origin **branch_name**  // `(manually)` // usually **`main`** (**`master` in previous versions**).
 
+// Fetching the changes made in remote repo by using github.com
+ - git pull <remote>
+ - 
+
 Connect to a remote github repo--
  - git remote   // to check if it is connected to github remote repository
  - git remote add origin https://github.com/aditya995/dartCodeVault.git 
