@@ -22,6 +22,10 @@ Connect to a remote github repo--
  - git merge **branch_name**  //To merge branches together
  - git branch -d **branch_name**  //To delete branch (might show **branch_name** is not fully merged). [ Safe delete ]
  - git branch -D **branch_name**  //To delete forcefully.
+
+**Vs code shortcuts**
+ - open terminal `ctrl` + *`*
+
 # Dart
 ## Contents
  ### Core concepts
