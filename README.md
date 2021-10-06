@@ -43,7 +43,7 @@ Connect to a remote github repo--
  12. Special character (constants in dart), https://chromium.googlesource.com/external/github.com/dart-lang/html/+/refs/tags/0.13.0/lib/src/constants.dart
  13. emoji print, ascii value print,
  14. if else, if else ladder, nested if else,
- 15. logical Operators(&&, ||, !=, ==, <=, >= , <, > )
+ 15. logical Operators(&&, ||, !, !=, ==, <=, >= , <, > )
  16. Ternary operator
  17. for loop, while loop, do while loop,
  18. increment operator, decrement operator (prefix, and postfix),
