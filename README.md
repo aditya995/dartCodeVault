@@ -1,5 +1,10 @@
 **git**
  - git clone https://github.com/aditya995/dartCodeVault.git     // Downloading files from github repo
+
+// Fetching the changes made in Remote repo. If Remote repo's current commit differs from current Local commit and the parent of both commits are same- then it needs to fetche from Remote repo first, then it can push current changes in local commit. First use git pull and then push current changes to Remote repo.
+ - git pull
+ - git config --global user.name "User_name"
+ - git config --global user.email "user_email"
  - git status   // See what is added or modified in local Drive
  - git add .    // Staging to commit
  - git commit -m "msg title" -m "msg body"  // Saving the files Locally (in pc drives).
@@ -8,8 +13,7 @@
  - git push --force  // If rejected `git push` for fast-forwards
  - git push origin **branch_name**  // `(manually)` // usually **`main`** (**`master` in previous versions**).
 
-// Fetching the changes made in Remote repo. If Remote repo's current commit differs from current Local commit and the parent of both commits are same- then it needs to fetche from Remote repo first, then it can push current changes in local commit. First use git pull and then push current changes to Remote repo.
- - git pull 
+ 
 
 Connect to a remote github repo--
  - git remote   // to check if it is connected to github remote repository
