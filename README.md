@@ -28,7 +28,7 @@ Connect to a remote github repo--
  - git branch -D **branch_name**  //To delete forcefully.
 
 **Vs code shortcuts**
- - open terminal `ctrl` + **`**
+ - open terminal `ctrl` + `
 
 # Dart
 ## Contents
