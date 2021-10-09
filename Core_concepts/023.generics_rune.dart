@@ -21,7 +21,7 @@ void main() {
   });
 
   string.runes.forEach((element) {
-    var char = String.fromCharCode(element);
+    var char = new String.fromCharCode(element); // Method of String Class
     print(
         '$element, ${char}, ${char.codeUnits}, ${String.fromCharCode(element)}');
   });
