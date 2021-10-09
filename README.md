@@ -60,13 +60,15 @@ Connect to a remote github repo--
  21. set add, remove, Spread Operator, Set operations(Union, Intersection, Difference),
  22. Random class, Random number generate
  23. Generics, Rune in dart,
+ 24. Switch case
 
 ### Program
 1. PositiveNegative number check
-2. vowel check program
-3. age check program ( adult, kid, teen)
+2. Vowel check program
+3. Age check program ( adult, kid, teen)
 4. Find factorial
 5. Fibonacci series
 6. Fahrenheit to celcious, Celcious to fahrenheit
 7. Number guessing game
-8. rock paper sissor Game
+8. Rock paper sissor Game
+9. Prime number
