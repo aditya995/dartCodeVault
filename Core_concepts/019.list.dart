@@ -4,14 +4,19 @@ dart 019.list.dart
 
 void main() {
   /// Creating list
+  //var list = new List(3); //(Not Null safe) Default constructor not available
   var list1 = [1, 2, 3, 2, 'ee', 1, 2, 3, 5];
   var list2 = [9, 8, 7, 8];
   print('$list1');
 
-  //list1.length; //returns a number
+  list1.length; //returns a number
+  //print(list1.reversed); //reverses the list
+
   /// Access individual items
   list1.first = 3; // value assigned
   list1.last = 1;
+  //list2[4] = 7786;  //(error)It does not exist
+  list1[4] = 'rr'; // using index
   print(
       '$list1\nFirst element ${list1.first} \nElement at index 3-> ${list1.elementAt(3)}\nLast element ${list1.last}');
 
@@ -21,7 +26,7 @@ void main() {
     999,
     889,
     779
-  ]; // removes all previous elements and ithese becames the new items
+  ]; // removes all previous elements and these becames the new items
   list1.add(4); // added at last
   list1.addAll(list2); // takes another list and adds it at last
   //list1.addAll(list1); // can't add itself, throughs error
@@ -32,6 +37,7 @@ void main() {
   ///remove items form list
   //list1.remove(2); // takes out first "2"
   //list1.removeAt(1);  //removes 1th index value
+  //list1.clear();  //empties the list
 
   ///find values
   print(list1.contains(2));
