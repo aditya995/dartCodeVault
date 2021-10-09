@@ -17,6 +17,11 @@ void main() {
 
   /// add items to list
   //list1.add(value);
+  list2 = [
+    999,
+    889,
+    779
+  ]; // removes all previous elements and ithese becames the new items
   list1.add(4); // added at last
   list1.addAll(list2); // takes another list and adds it at last
   //list1.addAll(list1); // can't add itself, throughs error

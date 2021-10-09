@@ -35,14 +35,24 @@ void main() {
   // Now it will not compile if list2 contains other than String !!
   var list2 = <String>['a', 'c', 'e', 'r'];
 
-  // maps can be specified too for certain datatypes
+  // maps can have generics too
   var map1 = {1: 'e', '3': 4}; //multiple datatypes in keys and values
   var map2 = <int, String>{
     1: 'w',
     2: 'r'
   }; // keys can only be int and values can only be string now!!
 
-  //
+  // sets with generics
   var set1 = {'a', 3, 'w'}; // multiple datatypes in values!!
   var set2 = <String>{'a', 'r'}; //Only strings allowed
+
+  //
+  dynamic vard1 = [1, 2];
+  print(vard1);
+  vard1 = [1, 'e'];
+  print(vard1);
+  dynamic vard2 = <int>[4, 5];
+  print(vard2);
+  vard2 = ['a', '3', 4];
+  print(vard2);
 }
