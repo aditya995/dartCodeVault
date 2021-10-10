@@ -47,6 +47,19 @@ void main() {
   var search = list1.indexOf(2, 2); // finds 2, starts from 2th index
   print('finds element 2, starts from 2th index: 2 is at index "${search}"');
 
+  /// Iterate through list
+  var list = {1, 2, 3, 4};
+  list.forEach((element) {
+    print('$element');
+  });
+
+  var a = list.map((e) => e * 2);
+  print(a);
+  print(a.elementAt(1));
+  a.forEach((element) {
+    print(element);
+  });
+
   /// converts into map and stores it in map1
   var map1 = list2.asMap();
   print(map1);

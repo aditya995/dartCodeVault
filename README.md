@@ -61,6 +61,7 @@ Connect to a remote github repo--
  22. Random class, Random number generate
  23. Generics, Rune in dart,
  24. Switch case
+ 25. Anonymous function
 
 ### Program
 1. PositiveNegative number check
