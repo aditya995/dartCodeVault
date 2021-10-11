@@ -1,6 +1,7 @@
 /*
 dart 021.set.dart
 */
+import 'dart:io';
 
 void main() {
   /// Create sets
@@ -36,6 +37,20 @@ void main() {
   print(seta.union(setb));
   print(seta.intersection(setb));
   print(seta.difference(setb));
+
+  /// Iterate through list
+  var set = {1, 2, 3, 4};
+  set.forEach((element) {
+    stdout.write('$element');
+  });
+  var a = set.map((e) => e * 2); // manipulate values
+  print(a);
+  a.forEach((element) {
+    print(element);
+  });
+
+  ///Converts to list (no mathod for toMap())
+  print(set1.toList());
 
   /// Spread operator
   var sety = {13, 15, 17};

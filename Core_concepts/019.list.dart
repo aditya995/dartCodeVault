@@ -2,6 +2,8 @@
 dart 019.list.dart
 */
 
+import 'dart:io';
+
 void main() {
   /// Creating list
   //var list = new List(3); //(Not Null safe) Default constructor not available
@@ -25,7 +27,8 @@ void main() {
   list2 = [
     999,
     889,
-    779
+    779,
+    999
   ]; // removes all previous elements and these becames the new items
   list1.add(4); // added at last
   list1.addAll(list2); // takes another list and adds it at last
@@ -48,22 +51,20 @@ void main() {
   print('finds element 2, starts from 2th index: 2 is at index "${search}"');
 
   /// Iterate through list
-  var list = {1, 2, 3, 4};
+  var list = [1, 2, 3, 4];
   list.forEach((element) {
-    print('$element');
+    stdout.write('$element');
   });
-
-  var a = list.map((e) => e * 2);
+  var a = list.map((e) => e * 2); // manipulate values
   print(a);
-  print(a.elementAt(1));
   a.forEach((element) {
     print(element);
   });
 
-  /// converts into map and stores it in map1
+  /// converts into map and set, stores it in new storages
   var map1 = list2.asMap();
+  var set1 = list2.toSet();
   print(map1);
+  print(set1);
   print(list2); // list2 is still list, map1 gets assigned as map
-  var list3 = map1.values.toList(); // maps to list
-  print('$list3');
 }

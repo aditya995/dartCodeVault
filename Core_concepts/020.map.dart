@@ -54,6 +54,17 @@ void main() {
       .elementAt(0)
       .hashCode); // returns the ith pair's hashCode in map
 
+  /// Iterate through list
+  var map = {1: 4, 2: 5, 3: 6, 4: 7};
+  map.forEach((keys, element) {
+    print('$keys => $element');
+  });
+  var a = map.map((k, e) => MapEntry(k * 2, e * 2)); // manipulate values
+  print(a);
+  a.forEach((key, element) {
+    print('$key :: $element');
+  });
+
   /// converts into list and sets
   var list1 = map1.values.toList(); // will contain duplicate values
   var set1 = map1.values.toSet(); // will not contain duplicate values
