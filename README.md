@@ -75,3 +75,4 @@ Connect to a remote github repo--
 7. Number guessing game
 8. Rock paper sissor Game
 9. Prime number
+10. Clock

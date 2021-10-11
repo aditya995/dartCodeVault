@@ -4,6 +4,7 @@ dart 017.loops.dart
 import 'dart:io';
 
 void main() {
+  print('Give int value');
   int a = int.parse(stdin.readLineSync()!);
 
   /// for loop In incrementing order
@@ -54,4 +55,28 @@ void main() {
     print('$i in do while loop(decrementing)');
     i--;
   } while (i > 0);
+
+  ///for in loop
+  var list = [1, 2, 3];
+  var map = {1: 22, 2: 42};
+  print('\n(for in) in list');
+  for (var element in list) {
+    stdout.write('$element ');
+  }
+  print('\n(for in) in map');
+  for (var element in map.keys) {
+    stdout.write('$element ');
+  }
+  for (var element in map.values) {
+    stdout.write('$element ');
+  }
+  for (var element in map.entries) {
+    stdout.write('$element ');
+  }
+
+  ///for each loop
+  print('\n(for each) in list');
+  list.forEach((element) {
+    stdout.write('$element, ');
+  });
 }
