@@ -62,6 +62,8 @@ Connect to a remote github repo--
  23. Generics, Rune in dart,
  24. Switch case
  25. Anonymous function
+ 26. Function
+ 27. Class
 
 ### Program
 1. PositiveNegative number check

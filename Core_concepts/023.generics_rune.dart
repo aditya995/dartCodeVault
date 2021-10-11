@@ -34,7 +34,8 @@ void main() {
   // To make it specific use generics
   // Now it will not compile if list2 contains other than String !!
   var list2 = <String>['a', 'c', 'e', 'r'];
-
+  //list2 = [3, 4]; // will through error
+  //list2[0] = 3; // will through error
   // maps can have generics too
   var map1 = {1: 'e', '3': 4}; //multiple datatypes in keys and values
   var map2 = <int, String>{
@@ -46,13 +47,18 @@ void main() {
   var set1 = {'a', 3, 'w'}; // multiple datatypes in values!!
   var set2 = <String>{'a', 'r'}; //Only strings allowed
 
-  //
+  // It does not effect dynamic
   dynamic vard1 = [1, 2];
   print(vard1);
+  vard1[0] = 'r';
   vard1 = [1, 'e'];
   print(vard1);
-  dynamic vard2 = <int>[4, 5];
+  dynamic vard2 = <int>[1, 4, 5]; // First time takes only int as values
   print(vard2);
-  vard2 = ['a', '3', 4];
+  vard2 = [
+    'a',
+    '3',
+    4
+  ]; //Can assign other types after 1st time, exceptional in dynamic(throughs error in other types)
   print(vard2);
 }

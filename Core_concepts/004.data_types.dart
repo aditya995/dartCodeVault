@@ -10,4 +10,5 @@ void main() {
   boolVal = true;
   stringVal = 'String';
   print('$integerVal $doubleVal $boolVal $stringVal');
+  print('$stringVal[0]'); // string individual characters
 }
