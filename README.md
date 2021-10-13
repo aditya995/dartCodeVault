@@ -63,7 +63,7 @@ Connect to a remote github repo--
  24. Switch case
  25. Anonymous function
  26. Function
- 27. Class
+ 27. Class creation of objects
 
 ### Program
 1. PositiveNegative number check
