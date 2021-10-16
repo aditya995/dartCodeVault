@@ -6,7 +6,7 @@ dart 027.class.dart
 
 class MyClass {
   void info() {
-    print('This is a class method');
+    print('This is the class method');
   }
 }
 
