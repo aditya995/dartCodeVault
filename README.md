@@ -51,7 +51,8 @@ Connect to a remote github repo--
  20. map, add, remove, update
  21. set add, remove, Spread Operator, Set operations(Union, Intersection, Difference),
  22. Random class, Random number generate
- 23. Generics, Rune in dart,
+ 23. Generics, Rune in dart
+ 24. 
 
 ### Program
 1. PositiveNegative number check
