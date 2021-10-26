@@ -1,5 +1,10 @@
 **git**
  - git clone https://github.com/aditya995/dartCodeVault.git     // Downloading files from github repo
+
+// Fetching the changes made in Remote repo. If Remote repo's current commit differs from current Local commit and the parent of both commits are same- then it needs to fetche from Remote repo first, then it can push current changes in local commit. First use git pull and then push current changes to Remote repo.
+ - git pull
+ - git config --global user.name **"User_name"**
+ - git config --global user.email **"user_email"**
  - git status   // See what is added or modified in local Drive
  - git add .    // Staging to commit
  - git commit -m "msg title" -m "msg body"  // Saving the files Locally (in pc drives).
@@ -8,8 +13,7 @@
  - git push --force  // If rejected `git push` for fast-forwards
  - git push origin **branch_name**  // `(manually)` // usually **`main`** (**`master` in previous versions**).
 
-// Fetching the changes made in Remote repo. If Remote repo's current commit differs from current Local commit and the parent of both commits are same- then it needs to fetche from Remote repo first, then it can push current changes in local commit. First use git pull and then push current changes to Remote repo.
- - git pull 
+ 
 
 Connect to a remote github repo--
  - git remote   // to check if it is connected to github remote repository
@@ -22,6 +26,10 @@ Connect to a remote github repo--
  - git merge **branch_name**  //To merge branches together
  - git branch -d **branch_name**  //To delete branch (might show **branch_name** is not fully merged). [ Safe delete ]
  - git branch -D **branch_name**  //To delete forcefully.
+
+**Vs code shortcuts**
+ - open terminal `ctrl` + `
+
 # Dart
 ## Contents
  ### Core concepts
@@ -51,15 +59,25 @@ Connect to a remote github repo--
  20. map, add, remove, update
  21. set add, remove, Spread Operator, Set operations(Union, Intersection, Difference),
  22. Random class, Random number generate
+<<<<<<< HEAD
  23. Generics, Rune in dart
  24. 
+=======
+ 23. Generics, Rune in dart,
+ 24. Switch case
+ 25. Anonymous function
+ 26. Function
+ 27. Class creation of objects
+>>>>>>> b112d6af4275ca17a1f80d3b0bdd187c7837e6c3
 
 ### Program
 1. PositiveNegative number check
-2. vowel check program
-3. age check program ( adult, kid, teen)
+2. Vowel check program
+3. Age check program ( adult, kid, teen)
 4. Find factorial
 5. Fibonacci series
 6. Fahrenheit to celcious, Celcious to fahrenheit
 7. Number guessing game
-8. rock paper sissor Game
+8. Rock paper sissor Game
+9. Prime number
+10. Clock
