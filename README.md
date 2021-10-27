@@ -67,7 +67,7 @@ Connect to a remote github repo--
  26. Function
  27. Class creation of objects, methods & access modifier
  28. constructors (default and named)
- 29. 
+ 29. abstract class
 
 ### Program
 1. PositiveNegative number check
