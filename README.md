@@ -29,6 +29,8 @@ Connect to a remote github repo--
 
 **Vs code shortcuts**
  - open terminal `ctrl` + `
+ - popup emoji `win` + `;`
+ - Suggestion on error `ctrl` + `.`
 
 # Dart
 ## Contents
@@ -63,7 +65,9 @@ Connect to a remote github repo--
  24. Switch case
  25. Anonymous function
  26. Function
- 27. Class creation of objects
+ 27. Class creation of objects, methods & access modifier
+ 28. constructors (default and named)
+ 29. 
 
 ### Program
 1. PositiveNegative number check
