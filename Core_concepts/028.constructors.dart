@@ -10,16 +10,23 @@ class Car {
   bool hasABS;
 
   ///Default constructor  ***
-  // Car(this.make, this.model, this.yearMade,
-  //     this.hasABS); // can ommit the body too
+  // Car(this.make, this.model, this.yearMade, this.hasABS); // can ommit the body too
 
-  //  default constructor with Initializer list  ***
-  Car(this.make, this.model, this.yearMade) : hasABS = true {
+  //  default constructor with Initializer list ***
+  // Car(this.make, this.model, this.yearMade) : hasABS = true {
+  //   //  'this.property' in the argument ensures the parameter passed to the constructor assignes the value to corresponding variable of that object
+  //   print('constructor called');
+  // }
+
+  // default constructor with 'required' and default values for parameters  ***
+  //  Writinh the arguments inside {} allows us to pass parameters like (key : value, key : value) pairs in the constructor calls
+  Car({required this.make, this.model = '', this.yearMade = ''})
+      : hasABS = true {
     //  'this.property' in the argument ensures the parameter passed to the constructor assignes the value to corresponding variable of that object
     print('constructor called');
   }
 
-  /// Null-safety doesnot allow below code, works perfectly without Null-safety ***
+  /// Null-safety doesnot allow below code, but works perfectly without Null-safety ***
   //  Car(String make, String model, String yearMade, bool _hasABS) {
   //   //  Use 'this' keyword for class properties
   //   this.make = make;
@@ -31,14 +38,14 @@ class Car {
   /// Named constructor
   // all porperties must be present, if some absent from this list must be passed to Initializer list
 
-  /// named constructor without body ***
+  // named constructor without body ***
   Car.withoutABS(this.make, this.model)
 
       /// Initializer list  (starts with colon and then comma seperates the properties)
       : yearMade = "2016",
         hasABS = false;
 
-  /// named constructor with body ***
+  // named constructor with body ***
   Car.Vox(this.model, this.yearMade, this.hasABS) : make = voxMake() {
     print('"make" set to "Vox" by Vox named constructor');
   }
@@ -58,7 +65,11 @@ String voxMake() {
 
 void main() {
   ///Using default constructor
-  Car myCar = Car('Aston', '54345d', '2015');
+  Car myCar =
+      Car(yearMade: '2015', make: 'Aston', model: '54345d'); // Best practice
+  //Car myCarN = Car('Aston', '54345d', '2015');  // this way is not permitted for this defaut constructor
+  // parameters passed as (key : value, key : value) pairs
+
   // Can't assign which is already assigned by Initializer list
   print('${myCar.make} ${myCar.model} ${myCar.yearMade} ${myCar.hasABS}');
 
