@@ -1,9 +1,18 @@
 /*
-dart 029.abstractClass.dart
+dart 030.abstractClass.dart
 */
 
 //  Abstract class, Abstract method
 
+/*    ******  Best practices for inheritance  ******
+ - parent class properties should be passed like -> Constructor(this.property, this.property); 
+ (Never use 'required' in parent constructor) ***
+
+ - child class constructor should have it's own and all the parent class properties as 'required' 
+ (That makes them all Named parameters) ***
+
+ - In super constructor the all the 'parent class's Named Parameters' be passed in the same sequence given in parent class ***
+*/
 abstract class Gun {
   // Abstract class
   int bulletCapacityInMag;
@@ -32,13 +41,14 @@ class Pistol extends Gun {
   int fireRate;
   Pistol(
       //  constructor for Pistol
-      {required this.fireRate, // property of this class
-      //  properties form base class
-      required int CurrentBulletsInMag,
-      required int health,
-      required int bulletCapacityInMag,
-      required String skinName})
-      // in the named parameter list, all properties of parent class must be present
+      {required this.fireRate, // Named parameter of this class
+      //  Form base class
+      required int CurrentBulletsInMag, //  Named parameters
+      required int health, //  Named parameters
+      required int bulletCapacityInMag, //  Named parameters
+      required String skinName //  Named parameters
+      })
+      // In named parameters list, all properties of parent class must be present
       // and use required if necessary
       : super(
           //  super constructor
