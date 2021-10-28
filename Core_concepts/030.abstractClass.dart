@@ -13,14 +13,20 @@ dart 030.abstractClass.dart
 
  - In super constructor the all the 'parent class's Named Parameters' be passed in the same sequence given in parent class ***
 */
-abstract class Gun {
+
+abstract class Entity {
+  double weight;
+  Entity(this.weight);
+}
+
+abstract class Gun extends Entity {
   // Abstract class
   int bulletCapacityInMag;
   int CurrentBulletsInMag;
-  int health;
   String skinName;
-  Gun(this.bulletCapacityInMag, this.CurrentBulletsInMag, this.skinName,
-      this.health);
+  Gun(double weight, this.bulletCapacityInMag, this.CurrentBulletsInMag,
+      this.skinName)
+      : super(weight);
 
   /// Careful with required keyword inherited class might not be able to access the properties for code below--
   /// Better stick with (this.property) in the constructor
@@ -29,12 +35,13 @@ abstract class Gun {
   //     required this.CurrentBulletsInMag,
   //     required this.skinName});
 
+  void info(); // Abstract method
+
   void bulletStats() {
-    print('''bulletCapacityInMag = ${this.bulletCapacityInMag}, 
+    print('''bulletStats() ->>>
+bulletCapacityInMag = ${this.bulletCapacityInMag}, 
 CurrentBulletsInMag = ${this.CurrentBulletsInMag}''');
   }
-
-  void info(); // Abstract method
 }
 
 class Pistol extends Gun {
@@ -44,31 +51,30 @@ class Pistol extends Gun {
       {required this.fireRate, // Named parameter of this class
       //  Form base class
       required int CurrentBulletsInMag, //  Named parameters
-      required int health, //  Named parameters
       required int bulletCapacityInMag, //  Named parameters
-      required String skinName //  Named parameters
-      })
+      required String skinName, //  Named parameters
+      required double weight})
       // In named parameters list, all properties of parent class must be present
       // and use required if necessary
       : super(
           //  super constructor
           //  maintain the sequence, same as written in the Parent constructor
+          weight,
           bulletCapacityInMag,
           CurrentBulletsInMag,
           skinName,
-          health,
         );
 
   @override
   void info() {
-    print('''The Base class is gun inherited class is pistol
-
-base class properties:
+    print('''info() ->>>
+The parent class is gun inherited class is pistol
+#---parent class properties:
 bulletCapacityInMag = ${super.bulletCapacityInMag}
 CurrentBulletsInMag = ${super.CurrentBulletsInMag}
+weight = ${super.weight}
 skinName = $skinName
-
-child class properties:
+#---child class properties:
 fireRate = $fireRate
 ''');
   }
@@ -79,12 +85,11 @@ void main() {
 
   //  values for the properties are assigned using constructor for parent and child class
   Pistol horhe = Pistol(
-    skinName: 'Dark52', //  properties of parent class
-    CurrentBulletsInMag: 45, //  properties of parent class
-    fireRate: 40, //  properties of the current class
-    bulletCapacityInMag: 55, //  properties of parent class
-    health: 100, //  properties of parent class
-  );
+      skinName: 'Dark52', //  properties of parent class
+      CurrentBulletsInMag: 45, //  properties of parent class
+      fireRate: 40, //  properties of the current class
+      bulletCapacityInMag: 55, //  properties of parent class
+      weight: 12.0);
 
   horhe.info();
   horhe.bulletStats();

@@ -3,15 +3,22 @@ dart 029.inheritance.dart
 */
 
 //  Inheritance (super in child class constructor)
-
 /// Base class
-class Gun {
+
+class Entity {
+  double weight;
+  Entity(this.weight);
+}
+
+/// inherited class / Child class of 'Entity'
+class Gun extends Entity {
   int bulletCapacityInMag;
   int CurrentBulletsInMag;
   int health;
   String skinName;
   Gun(this.bulletCapacityInMag, this.CurrentBulletsInMag, this.skinName,
-      this.health);
+      this.health, double weight)
+      : super(weight);
 
   void bulletStats(int bulletCapacityInMag, int CurrentBulletsInMag) {
     print('''bulletCapacityInMag = ${this.bulletCapacityInMag}, 
@@ -29,17 +36,17 @@ skinName = $skinName
   }
 }
 
-/// inherited class / Child class
+/// inherited class / Child class of 'Gun'
 /// use 'extends' keyword to inherit from a class
 class Pistol extends Gun {
   int fireRate;
   Pistol(this.fireRate)
-      : super(0, 0, '',
-            0); //  **** Bad way of initializing parent class properties ****
+      : super(0, 0, '', 0,
+            0.0); //  **** Bad way of initializing parent class properties ****
 }
 
 void main() {
-  Gun g = Gun(50, 12, 'Dark45', 100); // Parent class object
+  Gun g = Gun(50, 12, 'Dark45', 100, 12.0); // Parent class object
   //  child class object
   Pistol horhe = Pistol(40); // Can't initialize the parent class properties
   g.info();

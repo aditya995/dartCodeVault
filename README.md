@@ -70,6 +70,7 @@ Connect to a remote github repo--
  29. inheritance (super in child class constructor)
  30. abstract class
  31. Interface, Mixin
+ 32. static in dart
 
 ### Program
 1. PositiveNegative number check
