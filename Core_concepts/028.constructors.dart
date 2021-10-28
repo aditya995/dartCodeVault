@@ -1,7 +1,7 @@
 /*
 dart 028.constructors.dart
 */
-//  default constructor, Initializer list, named constructor
+//  default constructor, Initializer list, Named parameters,  named constructor
 
 class Car {
   String make;

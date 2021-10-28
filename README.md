@@ -1,4 +1,4 @@
-**git**
+## git
  - git clone https://github.com/aditya995/dartCodeVault.git     // Downloading files from github repo
 
 // Fetching the changes made in Remote repo. If Remote repo's current commit differs from current Local commit and the parent of both commits are same- then it needs to fetche from Remote repo first, then it can push current changes in local commit. First use git pull and then push current changes to Remote repo.
@@ -27,7 +27,7 @@ Connect to a remote github repo--
  - git branch -d **branch_name**  //To delete branch (might show **branch_name** is not fully merged). [ Safe delete ]
  - git branch -D **branch_name**  //To delete forcefully.
 
-**Vs code shortcuts**
+## Vs code shortcuts
  - open terminal `ctrl` + `
  - popup emoji `win` + `;`
  - Suggestion on error `ctrl` + `.`
@@ -66,7 +66,7 @@ Connect to a remote github repo--
  25. Anonymous function
  26. Function
  27. Class creation of objects, methods & access modifier
- 28. constructors (default and named)
+ 28. Constructors (default and named), Initializer list, Named parameters
  29. abstract class
 
 ### Program
