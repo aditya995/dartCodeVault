@@ -30,6 +30,7 @@ skinName = $skinName
 }
 
 /// inherited class / Child class
+/// use 'extends' keyword to inherit from a class
 class Pistol extends Gun {
   int fireRate;
   Pistol(this.fireRate)

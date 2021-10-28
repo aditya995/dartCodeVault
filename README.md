@@ -69,6 +69,7 @@ Connect to a remote github repo--
  28. Constructors (default and named), Initializer list, Named parameters
  29. inheritance (super in child class constructor)
  30. abstract class
+ 31. Interface, Mixin
 
 ### Program
 1. PositiveNegative number check

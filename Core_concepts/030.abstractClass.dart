@@ -29,9 +29,9 @@ abstract class Gun {
   //     required this.CurrentBulletsInMag,
   //     required this.skinName});
 
-  void bulletStats(int bulletCapacityInMag, int CurrentBulletsInMag) {
+  void bulletStats() {
     print('''bulletCapacityInMag = ${this.bulletCapacityInMag}, 
-        CurrentBulletsInMag = ${this.CurrentBulletsInMag}''');
+CurrentBulletsInMag = ${this.CurrentBulletsInMag}''');
   }
 
   void info(); // Abstract method
@@ -87,4 +87,5 @@ void main() {
   );
 
   horhe.info();
+  horhe.bulletStats();
 }
