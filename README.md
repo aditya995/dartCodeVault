@@ -71,6 +71,8 @@ Connect to a remote github repo--
  30. abstract class
  31. Interface, Mixin
  32. static in dart
+ 33. toString in class
+ 34. Operator overloading
 
 ### Program
 1. PositiveNegative number check

@@ -1,6 +1,9 @@
 /**
 dart 032.static.dart
 */
+
+/// static function and properties in class
+
 abstract class Animal {
   int legs;
   static int countAnimal = 0; //  Static property
