@@ -73,6 +73,9 @@ Connect to a remote github repo--
  32. static in dart
  33. toString in class
  34. Operator overloading
+ 35. extension
+ 36. Number format and bitwise operators
+ 37. Shifting operators
 
 ### Program
 1. PositiveNegative number check

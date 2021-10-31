@@ -1,6 +1,8 @@
 /*
 dart 010.operators.dart
 */
+/// +, -, *, /, ~/ (Integer division Op.), %,
+/// +=, -=, *=, /=, ~/=, ++, --
 
 void main() {
   int valA, valB;
@@ -24,7 +26,9 @@ void main() {
 
   /// Divide operation
   valC = valA / valB;
-  print(valC);
+  int valCc = valA ~/ valB;
+  // Used integer division Op, Or will error for assigning double to an int variable
+  print('$valC $valCc');
 
   /// Modulus operation
   res = valB % valA; // e.g.(example given) 3%2 = 1
