@@ -57,4 +57,16 @@ void main() {
   if ((val1 > val2) || (val1 < 10)) {
     print('val1 is greater than val2 or less than 10 (using ||)');
   }
+  val3 = 5;
+  val4 = 6;
+  if (!(val3 != val4))
+    print('Equals');
+  else
+    print('Not equals');
+  bool a, b;
+  a = b = true;
+  if (!(a != b))
+    print('bool Equals');
+  else
+    print('bool Not equals');
 }

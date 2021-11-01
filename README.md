@@ -31,6 +31,8 @@ Connect to a remote github repo--
  - open terminal `ctrl` + `
  - popup emoji `win` + `;`
  - Suggestion on error `ctrl` + `.`
+ - Open Documentation: Hover over the element `ctrl` + `MouseClick`
+ - Change current working file: `ctrl` + `TAB`
 
 # Dart
 ## Contents

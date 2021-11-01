@@ -15,12 +15,13 @@ dart 030.abstractClass.dart
 */
 
 abstract class Entity {
+  // Base Abstract Class
   double weight;
   Entity(this.weight);
 }
 
 abstract class Gun extends Entity {
-  // Abstract class
+  // Base Abstract Class Child of Entity class
   int bulletCapacityInMag;
   int CurrentBulletsInMag;
   String skinName;
@@ -28,15 +29,16 @@ abstract class Gun extends Entity {
       this.skinName)
       : super(weight);
 
-  /// Careful with required keyword inherited class might not be able to access the properties for code below--
-  /// Better stick with (this.property) in the constructor
+  // Careful with required keyword inherited class might not be able to access the properties for code below--
+  // Better stick with (this.property) in the constructor
   // Gun(int currentBulletsInMag, int bulletCapacityInMag,
   //     {required this.bulletCapacityInMag,
   //     required this.CurrentBulletsInMag,
   //     required this.skinName});
+  /// Abstract method in class "Gun"
+  void info();
 
-  void info(); // Abstract method
-
+  /// In Gun class
   void bulletStats() {
     print('''bulletStats() ->>>
 bulletCapacityInMag = ${this.bulletCapacityInMag}, 
@@ -45,6 +47,7 @@ CurrentBulletsInMag = ${this.CurrentBulletsInMag}''');
 }
 
 class Pistol extends Gun {
+  /// Child Class of Gun
   int fireRate;
   Pistol(
       //  constructor for Pistol
@@ -81,7 +84,7 @@ fireRate = $fireRate
 }
 
 void main() {
-  /// Gun g = Gun(); // creating instance of abstract class is prohibited
+  // Gun g = Gun(); // creating instance of abstract class is prohibited
 
   //  values for the properties are assigned using constructor for parent and child class
   Pistol horhe = Pistol(
