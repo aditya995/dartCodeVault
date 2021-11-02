@@ -7,18 +7,18 @@ void main() {
   value1 = 5;
   value2 = 15;
 
-  /// Simple if-else
+  // Simple if-else
   if (value1 > value2) {
     print('$value1 big');
   } else {
     print('$value2 big'); //15 big // Outputs this
   }
 
-  /// if-else ladder
+  // if-else ladder
   value1 = 13;
   value2 = 13;
 
-  ///check which is bigger or print same values if so.
+  //check which is bigger or print same values if so.
   if (value1 > value2) {
     print('$value1 big');
   } else if (value1 < value2) {
@@ -27,12 +27,12 @@ void main() {
     print('Same values'); // Outputs this
   }
 
-  /// Nested if-else
+  // Nested if-else
   value1 = 25;
   value2 = 105;
   value3 = 32;
 
-  ///print biggest value
+  //print biggest value
   if (value1 > value2) {
     if (value1 > value3) {
       print(

@@ -10,14 +10,16 @@ void main() {
   String strVal;
 
   print('Give Integer Input');
-  intVal = int.parse(
-      stdin.readLineSync()!); // Takes only integer values Or compilation error
+  // Takes only integer values, otherwise will result a compilation error
+  intVal = int.parse(stdin.readLineSync()!);
+
   print('Give Double Input');
-  doubleVal = double.parse(
-      stdin.readLineSync()!); // Takes only double values Or compilation error
+  // Takes only Double values, otherwise will result a compilation error
+  doubleVal = double.parse(stdin.readLineSync()!);
+
   print('Give String Input');
-  strVal =
-      stdin.readLineSync()!; // Takes only String values Or compilation error
+  // Takes only String values, otherwise will result a compilation error
+  strVal = stdin.readLineSync()!;
 
   print('$intVal $doubleVal  $strVal');
 }

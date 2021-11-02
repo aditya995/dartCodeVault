@@ -7,21 +7,21 @@ void main() {
   print('Give int value');
   int a = int.parse(stdin.readLineSync()!);
 
-  /// for loop In incrementing order
+  //  for loop In incrementing order
   for (int i = 1; i < a; i++) {
     //  initial statement; condition, value update statement
     print('$i in for loop(incrementing)');
   }
   print(' ');
 
-  /// for loop In decrementing order
+  //  for loop In decrementing order
   for (int i = a; i > 0; i--) {
     //  initial statement; condition; value update statement
     print('$i in for loop(decrementing)');
   }
   print(' ');
 
-  /// while loop In incrementing order
+  //  while loop In incrementing order
   int i = 1;
   while (i < a) {
     // condition
@@ -30,7 +30,7 @@ void main() {
   }
   print(' ');
 
-  ///while loop In decrementing order
+  //  while loop In decrementing order
   i = a;
   while (i > 0) {
     // condition
@@ -39,7 +39,7 @@ void main() {
   }
   print(' ');
 
-  /// do while loop In incrementing order
+  //  do while loop In incrementing order
   i = 1;
   do {
     // condition
@@ -48,7 +48,7 @@ void main() {
   } while (i < a);
   print(' ');
 
-  /// do while loop In decrementing order
+  //  do while loop In decrementing order
   i = a;
   do {
     // condition
@@ -56,7 +56,7 @@ void main() {
     i--;
   } while (i > 0);
 
-  ///for in loop
+  //  for in loop
   var list = [1, 2, 3];
   var map = {1: 22, 2: 42};
   print('\n(for in) in list');
@@ -74,7 +74,7 @@ void main() {
     stdout.write('$element ');
   }
 
-  ///for each loop
+  //  for each loop
   print('\n(for each) in list');
   list.forEach((element) {
     stdout.write('$element, ');

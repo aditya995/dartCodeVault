@@ -3,7 +3,7 @@ dart 020.map.dart
 */
 
 void main() {
-  /// Map create
+  //  Map create
   var map1 = {
     1: 2,
     2: '3',
@@ -15,16 +15,16 @@ void main() {
   map2 = {4: 33, 5: 't'};
   print(map1);
 
-  //map1.length; //returns a number
+  // map1.length; //returns a number
 
-  /// Access individual items
+  //  Access individual items
   map1[2] = 'w'; // value assigned using keys
-  map1['5'] = 5; //(was not in the map before) It also added the key and values
+  map1['5'] = 5; // (was not in the map before) It also added the key and values
   map1['6'] = 8;
   print('$map1');
   print(map1.containsKey('5'));
 
-  ///add items to list
+  //  add items to list
   map1.addAll({7: 43, 8: 'yy'});
   print(map1);
   map2 = {
@@ -34,14 +34,14 @@ void main() {
   map2.putIfAbsent('33', () => 444); // inserts if absent
   print(map2);
 
-  ///remove items form map
-  //map1.remove(key); // removes it from map
-  //map1.clear(); //erase all data
+  //  remove items form map
+  //  map1.remove(key); // removes it from map
+  //  map1.clear(); //erase all data
   map1.removeWhere((key, value) =>
-      (key == 1 || value == 5)); //function for removing elements
+      (key == 1 || value == 5)); // function for removing elements
   print(map1);
 
-  ///find values
+  //  find values
   print(map1.containsKey(2));
   print(map1.containsValue('yy'));
   print(map1.entries.elementAt(0)); // returns the ith pair in map
@@ -54,7 +54,7 @@ void main() {
       .elementAt(0)
       .hashCode); // returns the ith pair's hashCode in map
 
-  /// Iterate through list
+  //  Iterate through list
   var map = {1: 4, 2: 5, 3: 6, 4: 7};
   map.forEach((keys, element) {
     print('$keys => $element');
@@ -65,7 +65,7 @@ void main() {
     print('$key :: $element');
   });
 
-  /// converts into list and sets
+  //  converts into list and sets
   var list1 = map1.values.toList(); // will contain duplicate values
   var set1 = map1.values.toSet(); // will not contain duplicate values
   var list2 = map1.keys.toList(); // works both in keys and values

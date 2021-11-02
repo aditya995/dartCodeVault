@@ -5,7 +5,7 @@ dart 024.switch.dart
 void main() {
   int a = 0;
 
-  /// switch case
+  // switch case
 
   switch (a) {
     case 1:

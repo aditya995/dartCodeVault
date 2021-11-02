@@ -3,37 +3,40 @@ dart 026.function.dart
 */
 import 'dart:io';
 
-///function
+//  function
 
 void traverseValues(int val, List list1, Map map1) {
+  print('traverseValues() starts...');
   val *= 100;
   print('$val');
-  print('List passed in function as "call by value"');
+
+  print('List passed in function as "call by reference"');
+  int i = 0;
   list1.forEach((element) {
-    list1[0] = 10000; // It got called by reference
-    stdout.write('$element, ');
+    list1[i++] = 10000; // Call by reference
+    stdout.write('$element - ${list1[i - 1]},');
   });
-  print('\nMap passed in function as "call by value"');
+
+  print('\nMap passed in function as "call by reference"');
   map1.forEach((key, value) {
-    value += ';;'; // call by value *****(exception)*****
-    stdout.write('$key => $value, ');
+    map1[key] += '&&'; // Call by reference
+    stdout.write('$key => ${map1[key]} ');
   });
   print('');
+  print('traverseValues() ends...\n');
 }
 
 Map changeValInMap(Map map1) {
   map1.forEach((key, value) {
-    value -= 5000; // It got called by reference
-    map1[key] = value + 50; // It got called by reference
-    stdout.write('${map1[key]}|');
+    map1[key] = value + 50; // Call by reference
+    stdout.write('$key: ${map1[key]},');
   });
   print('');
   for (var ele in map1.entries) {
-    map1[ele.key] += 900; // It got called by reference
-    stdout.write('${ele.value}, ');
+    map1[ele.key] += 50; // Call by reference
+    stdout.write('${ele.key}: ${map1[ele.key]}, ');
   }
-  print(map1);
-  //print(mapRes);
+  print('\n');
   return map1;
 }
 
@@ -43,13 +46,11 @@ void main() {
   var map = {1: 'a', 2: 'b', 3: 'c'};
   var map2 = {1: 11, 2: 22, 3: 33};
   traverseValues(value, list, map);
-  print('In main function $value');
-  print('In main function $list');
-  print(
-      'In main function $map'); // call by value, if map contains string(exception)
+  print('In main function value = $value');
+  print('In main function list = $list\n');
 
-  /// lists maps sets are call by reference by default !!!
+  //  lists, maps, sets are call by reference by default !!!
   changeValInMap(map2);
-  print('map2 final values in main function');
+  print('In main function map2 = ');
   print(map2);
 }
