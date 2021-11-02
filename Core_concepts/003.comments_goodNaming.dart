@@ -25,3 +25,16 @@ void main() {
  * // TODO: Some Instructions
  */
 
+/**
+ * Commenting to create documentation in Dart
+ * ///  Some title
+ * ///
+ * ///  Line break added
+ * ///  **Heading:**
+ * ///  `Highlighted when peeking by hovering mouse on items (Multiline allowed)`
+ * ///  ``Also can be used``
+ * ///  ```Also can be used```
+ * ///  [Highlighted comments in the original Source code file]
+ * ///  
+ * 
+ */
