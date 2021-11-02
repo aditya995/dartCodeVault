@@ -2,37 +2,60 @@
 dart 032.static.dart
 */
 
-/// static function and properties in class
+//  static function and properties in class
 
+class gg {
+  static int fg = 1;
+}
+
+/// Base class
 abstract class Animal {
   int legs;
-  static int countAnimal = 0; //  Static property
+
+  ///  Static property
+  ///
+  /// In `Animal` [Class]
+  static int countAnimal = 0;
   Animal(this.legs) {
     print('##   Parent created/called');
     countAnimal++;
   }
 
   /// Static function
+  ///
+  /// In `Animal` [Class]
   static int countInstance() {
     //  Static function can only have static properties
     return countAnimal;
   }
 
+  /// Prints all properties of `Animal` [Class]
+  ///
+  /// In `Animal` [Class]
   void info() {
+    //  Static members of `any class` can be accessed from anywhere !!
     print(
-        "${this.runtimeType} has $legs legs. Total animal created ${Animal.countAnimal}");
+        "${this.runtimeType} has $legs legs. Total animal created ${Animal.countAnimal} \nHorse = ${Horse.countHorse}, \nDove = ${Dove.countDove}");
   }
 }
 
+/// `Animal` > `Horse` [Class]
 class Horse extends Animal {
-  static int countHorse = 0; //  Static property
+  ///  Static property
+  ///
+  /// In `Animal` > `Horse` [Class]
+  static int countHorse = 0;
   Horse({required int legs}) : super(legs) {
     print('**   Child created');
     countHorse++;
   }
 }
 
+/// `Animal` > `Dove` [Class]
 class Dove extends Animal {
+  ///  Static property
+  ///
+  /// In `Animal` > `Dove` [Class]
   static int countDove = 0; //  Static property
   Dove({required int legs}) : super(legs) {
     print('**   Child created');
