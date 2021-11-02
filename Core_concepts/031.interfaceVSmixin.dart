@@ -60,7 +60,7 @@ valInInterfaceOfBase = $valInInterfaceOfBase \n\n''');
   }
 }
 
-/// Mixin with class
+/*************************************MIXINS with class******************************************** */
 //  Mixin can not have constructor for initializing properties
 mixin mix1 {
   /// In `mix1`
@@ -127,6 +127,71 @@ ${this.mixinvar1}, ${this.mixinvar2}''');
   }
 }
 
+/************************************* MIXINS with class (`on` keyword) ******************************************** */
+///  Common to all airborne
+mixin Fluttering {
+  /// In `Fluttering` [mixin]
+  void flutter() {
+    print('fluttering');
+  }
+}
+
+///  Base class
+abstract class Insect {
+  /// In `Insect` [Class]
+  void crawl() {
+    print('crawling');
+  }
+}
+
+///  `Insect` > [mixin] [`Fluttering`]=> `AirborneInsect` [Class]
+abstract class AirborneInsect extends Insect with Fluttering {
+  /// In `Insect` > [mixin] [`Fluttering`]=> `AirborneInsect` [Class]
+  void buzz() {
+    print('buzzing annoyingly');
+  }
+}
+
+/// `Insect` > [mixin] [`Fluttering`]=> `AirborneInsect` > `Mosquito` [Class]
+class Mosquito extends AirborneInsect {
+  /// In `Insect` > [mixin] [`Fluttering`]=> `AirborneInsect` > `Mosquito` [Class]
+  void doMosquitoThing() {
+    crawl();
+    flutter();
+    buzz();
+    print('sucking blood');
+  }
+}
+
+/// Common to all birds
+//  `on` keyword specifies `Pecking` can not be used in other than `Bird` class or it's Child classes
+mixin Pecking on Bird {
+  /// In Pecking `mixin`
+  void peck() {
+    print('pecking');
+
+    chirp(); //  Without `on` keyword this function call will result error
+    flutter(); //  Without `on` keyword this function call will result error
+    //  chirp(), flutter() definitions will be taken from `Bird`
+    //  chirp() is present in `Bird`
+    //  flutter() is being taken from `Fluttering` from `Bird`. Cause (Bird with Fluttering)
+  }
+}
+
+/// [mixin] [`Fluttering`] => `Bird` [Class]
+abstract class Bird with Fluttering {
+  /// In [mixin] [`Fluttering`] => `Bird` [Class]
+  void chirp() {
+    print('chirp chirp');
+  }
+}
+
+/// [mixin] [`Fluttering`] => `Bird` > [mixin] [`Pecking`] => `Sparrow` [Class]
+class Sparrow extends Bird with Pecking {}
+
+/// [mixin] [`Fluttering`] => `Bird` > [mixin] [`Pecking`] => `BlueJay` [Class]
+class BlueJay extends Bird with Pecking {}
+
 void main() {
   //  Objects of base classes
   Base1 b1 = Base1(10, 20);
@@ -157,4 +222,17 @@ void main() {
   withMixin_interface.info();
   // Gets mix2Info() form mix2
   withMixin_interface.mix2Info();
+  print('----------------------');
+  Mosquito m = Mosquito();
+  m.doMosquitoThing();
+  m.buzz();
+  m.crawl();
+  m.flutter();
+  print('----------------------');
+  //  `on` keyword in mixin (Used on `Bird` class with `Pecking` mixin)
+
+  Sparrow s = Sparrow();
+  s.peck();
+  s.chirp();
+  s.flutter();
 }
