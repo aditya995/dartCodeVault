@@ -11,6 +11,9 @@ void main() {
 
   print('\nEmoji printing\u{1F600} 😀');
 
+  //  can print multiple times using * operator
+  print('😀' * 5 + '1 ' * 2 + '2 ' + '3 ' * 2);
+
   //  Newline without using \n, **  use '''string'''
   print('''Using string literals: 😀😀
   Now no longer need a new-line character for
