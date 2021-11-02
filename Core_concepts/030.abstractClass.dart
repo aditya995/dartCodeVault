@@ -77,7 +77,7 @@ class Pistol extends Gun {
 
   @override
 
-  /// Prints all the properties of Pistol
+  /// Prints all the properties of `Pistol`
   ///
   /// `abstract` `Entity` > `abstract` `Gun` > `Pistol`
   void info() {
