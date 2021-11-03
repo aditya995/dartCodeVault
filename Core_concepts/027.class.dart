@@ -2,7 +2,7 @@
 dart 027.class.dart
 */
 
-//  class, access modifiers
+//  class, access modifiers, getters, setters
 
 /// Has two properties:
 ///

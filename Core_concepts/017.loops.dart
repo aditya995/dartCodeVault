@@ -63,15 +63,17 @@ void main() {
   for (var element in list) {
     stdout.write('$element ');
   }
-  print('\n(for in) in map');
-  for (var element in map.keys) {
-    stdout.write('$element ');
+  print('\n(for in) in map: keys');
+  for (var key in map.keys) {
+    stdout.write('$key ');
   }
-  for (var element in map.values) {
-    stdout.write('$element ');
+  print('\n(for in) in map: values');
+  for (var value in map.values) {
+    stdout.write('$value ');
   }
+  print('\n(for in) in map: entries');
   for (var element in map.entries) {
-    stdout.write('$element ');
+    stdout.write('$element , k: ${element.key}, v: ${element.value} | ');
   }
 
   //  for each loop
