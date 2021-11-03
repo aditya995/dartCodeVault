@@ -2,10 +2,10 @@
 dart 036.bitwiseOperators_Numberformat.dart
 */
 
-/// bitwiseOperators and Hexformat in dart
+//  bitwiseOperators and Hexformat in dart
 
 void main() {
-  ///  Storing numbers as Hex format in int variables
+  //   Storing numbers as Hex format in int variables
   int a = 0xf0; // binary 11110000
   int b = 0x0f; // binary 00001111
 
