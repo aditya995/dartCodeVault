@@ -57,10 +57,12 @@ extension IterableNumX<T extends num> on Iterable<T> {
   /// Entension Method for [`int`, `double`] using generic extension
   T sum() {
     // 1. initialize sum
-    dynamic sum = (T == int ? 0 : 0.0) as T;
+    T sum = (T == int ? 0 : 0.0) as T;
     // 2. calculate sum
     for (var current in this) {
-      sum += current;
+      //  dart is not smart enough to know the expression returns type "T"
+      // (sum + current) as T; to convert it to T
+      sum = (sum + current) as T;
     }
     return sum;
   }
