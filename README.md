@@ -78,6 +78,7 @@ Connect to a remote github repo--
  35. extension
  36. Number format and bitwise operators
  37. Shifting operators
+ 38. Enumeration
 
 ### Program
 1. PositiveNegative number check
