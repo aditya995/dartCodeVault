@@ -19,30 +19,62 @@ extension on String {
 }
 
 void main(List<String> args) {
+  //  Prompt User to give valid CMD to run the program
   if (args.isEmpty) {
     print('->dart fileName.dart <inputfile.csv>');
     exit(1);
   }
+  //  Taking CMD parameters
   final inputFile = args.first;
-  print(inputFile);
+  //  Reading file contents
   final lines = File(inputFile).readAsLinesSync();
+  //  First line (title) removed
   lines.removeAt(0);
-  int avgPrice = 0;
-  int totalPrice = 0;
-  int i = 0;
-  var categories = <String, int>{};
+
+  Set categoriesSet = <String>{};
+  List data = [];
   for (var line in lines) {
     //  Separating individual field Values as string List
-    final values = line.split(',');
+    var values = line.split(',');
     //  Removing "" from the strings
     final performance = values[3].replaceAll('"', '');
     values[3] = performance;
-    print(values);
-
-    //  Storing the prices field values
-    int? cVal = values[2].toIntorNull();
-    if(cVal == null)
-    categories[performance] = values
-    print(avgPrice);
+    //  formatting data for dart variables
+    if (performance.length > 2) {
+      categoriesSet.add(performance);
+      data.add(values);
+    } else {
+      categoriesSet.add(' Invalid Name ');
+      values[3] = ' Invalid Name ';
+      data.add(values);
+    }
   }
+
+  Map categoriesCount = <String, int>{
+    for (var item in categoriesSet) item: 0,
+  };
+
+  Map categoriesAvgPrice = <String, int>{
+    for (var item in categoriesSet) item: 0,
+  };
+
+  data.forEach((element) {
+    ++categoriesCount[element[3]]; //  Counts for each category
+
+    //  Car price data formatting
+    String str1 = element[2].toString();
+    int? n = str1.toIntorNull();
+    if (n != null) {
+      //  total price for each category
+      categoriesAvgPrice[element[3]] = n + categoriesAvgPrice[element[3]];
+    }
+  });
+  for (var item in categoriesSet) {
+    categoriesAvgPrice[item] =
+        categoriesAvgPrice[item] ~/ categoriesCount[item];
+  }
+
+  print('\nResult:\n');
+  print(categoriesCount);
+  print(categoriesAvgPrice);
 }
