@@ -85,4 +85,8 @@ void main() {
   list.forEach((element) {
     stdout.write('$element, ');
   });
+  //  same as passing the list variable name
+  [1, 2, 3, '4', 5].forEach((element) {
+    stdout.write('$element, ');
+  });
 }

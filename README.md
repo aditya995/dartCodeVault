@@ -79,6 +79,8 @@ Connect to a remote github repo--
  36. Number format and bitwise operators
  37. Shifting operators
  38. Enumeration
+ 39. collection if, collection for and spread operator on collections
+ 40. 
 
 ### Program
 1. PositiveNegative number check

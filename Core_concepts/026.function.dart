@@ -3,7 +3,7 @@ dart 026.function.dart
 */
 import 'dart:io';
 
-//  function
+//  function, Named parameters, optional perameter, default arguments,
 
 void traverseValues(int val, List list1, Map map1) {
   print('traverseValues() starts...');
@@ -40,6 +40,12 @@ Map changeValInMap(Map map1) {
   return map1;
 }
 
+//  Named parameters with default value
+//  If we try to assign default values to arguments it has to be a named parameter
+int add({int n = 0, required int m}) {
+  return n + m;
+}
+
 void main() {
   int value = 2;
   var list = [1, 2, 3];
@@ -53,4 +59,7 @@ void main() {
   changeValInMap(map2);
   print('In main function map2 = ');
   print(map2);
+
+  print(add(m: 5, n: 2));
+  print(add(m: 10)); // Value of n set to default value
 }
