@@ -80,7 +80,7 @@ Connect to a remote github repo--
  37. Shifting operators
  38. Enumeration
  39. collection if, collection for and spread operator on collections
- 40. 
+ 40. Copying collections
 
 ### Program
 1. PositiveNegative number check
