@@ -34,6 +34,9 @@ Connect to a remote github repo--
  - Open Documentation: Hover over the element `ctrl` + `MouseClick`
  - Change current working file: `ctrl` + `TAB`
 
+## Command Prompt shortcuts
+ - Get file names from that directory in the terminal `tab` or `shift` + `tab`
+
 # Dart
 ## Contents
  ### Core concepts
@@ -81,6 +84,7 @@ Connect to a remote github repo--
  38. Enumeration
  39. collection if, collection for and spread operator on collections
  40. Copying collections
+ 41. Command line arguments
 
 ### Program
 1. PositiveNegative number check
@@ -93,3 +97,4 @@ Connect to a remote github repo--
 8. Rock paper sissor Game
 9. Prime number
 10. Clock
+11. Read a CSV file and find average car price
