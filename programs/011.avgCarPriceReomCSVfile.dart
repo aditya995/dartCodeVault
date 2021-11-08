@@ -3,6 +3,10 @@ dart 011.avgCarPriceReomCSVfile.dart ford_escort.csv
 */
 
 //  Processing CSV files
+
+//  Calculate average price of cars by categories, Count cars by their
+//  performance
+
 import 'dart:io';
 
 /// Adds new methods to `String` which is not possible without extension
@@ -26,17 +30,19 @@ void main(List<String> args) {
   int avgPrice = 0;
   int totalPrice = 0;
   int i = 0;
+  var categories = <String, int>{};
   for (var line in lines) {
     //  Separating individual field Values as string List
-    var values = line.split(',');
+    final values = line.split(',');
     //  Removing "" from the strings
-    var remarks = values[3].replaceAll('"', '');
-    values[3] = remarks;
+    final performance = values[3].replaceAll('"', '');
+    values[3] = performance;
     print(values);
+
+    //  Storing the prices field values
     int? cVal = values[2].toIntorNull();
-    i++;
-    if (cVal == null) --i;
-    totalPrice += (cVal == null) ? 0 : cVal;
-    print(totalPrice ~/ i);
+    if(cVal == null)
+    categories[performance] = values
+    print(avgPrice);
   }
 }
