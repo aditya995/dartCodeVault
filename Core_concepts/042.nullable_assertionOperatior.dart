@@ -15,6 +15,7 @@ void main(List<String> args) {
   }
   var valB = valA; //  "var" are by default Nullable
   //  If certain the value will not be null use "!" [assertion Operator]
+  //  Tells dart to let us assign nullable variable's value to non-nullable variable
   int valC = valA!;
   print(valB);
   print(valC);
