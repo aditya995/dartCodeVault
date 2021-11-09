@@ -10,10 +10,12 @@ void main(List<String> args) {
   if (input > 0) {
     valA = input;
   } else {
-    valA = 0;
+    // Uncomment below to see dart knows It is not a null value
+    //  valA = 0;
   }
   var valB = valA; //  "var" are by default Nullable
-  int valC = valA;
+  //  If certain the value will not be null use "!" [assertion Operator]
+  int valC = valA!;
   print(valB);
   print(valC);
 }
