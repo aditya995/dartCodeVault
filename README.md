@@ -85,8 +85,9 @@ Connect to a remote github repo--
  39. collection if, collection for and spread operator on collections
  40. Copying collections
  41. Command line arguments
- 42. Nullable and assertion Operator, if null operator, Augmented assignment if null operator
- 43. Nullable with generics
+ 42. Nullable, assertion Operator, if null operator, Augmented assignment if null operator
+ 43. Nullable with generics in collections
+ 44. functions passed as arguments, inner functions
 
 ### Program
 1. PositiveNegative number check
