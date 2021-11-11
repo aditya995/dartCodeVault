@@ -43,7 +43,9 @@ void main() {
   set.forEach((element) {
     stdout.write('$element');
   });
-  var a = set.map((e) => e * 2); // manipulate values
+  //  .map(() => value ); method returns an Iterable!
+  //  Converting to original type is advised, to avoid errors!!
+  var a = set.map((e) => e * 2).toSet(); // manipulate values
   print(a);
   a.forEach((element) {
     print(element);

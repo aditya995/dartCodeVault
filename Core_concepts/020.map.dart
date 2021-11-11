@@ -59,6 +59,8 @@ void main() {
   map.forEach((keys, element) {
     print('$keys => $element');
   });
+  //  .map(() => value ); method on Map returns a Map!
+  //  No need of converting type to original type to avoid errors!!
   var a = map.map((k, e) => MapEntry(k * 2, e * 2)); // manipulate values
   print(a);
   a.forEach((key, element) {

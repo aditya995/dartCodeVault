@@ -55,7 +55,9 @@ void main() {
   list.forEach((element) {
     stdout.write('$element');
   });
-  var a = list.map((e) => e * 2); // manipulate values
+  //  .map(() => value ); method returns an Iterable!
+  //  Converting to original type is advised, to avoid errors!!
+  var a = list.map((e) => e * 2).toList(); // manipulate values
   print(a);
   a.forEach((element) {
     print(element);

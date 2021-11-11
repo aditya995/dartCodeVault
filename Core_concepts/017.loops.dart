@@ -24,6 +24,7 @@ void main() {
     print('$i in for loop(decrementing)');
   }
   print(' ');
+  print('-------');
 
   //  while loop In incrementing order
   int i = 1;
@@ -42,6 +43,7 @@ void main() {
     i--;
   }
   print(' ');
+  print('-------');
 
   //  do while loop In incrementing order
   i = 1;
@@ -59,6 +61,7 @@ void main() {
     print('$i in do while loop(decrementing)');
     i--;
   } while (i > 0);
+  print('-------');
 
   //  for in loop
   var list = [1, 2, 3];
@@ -79,6 +82,7 @@ void main() {
   for (var element in map.entries) {
     stdout.write('$element , k: ${element.key}, v: ${element.value} | ');
   }
+  print('\n-------');
 
   //  for each loop
   print('\n(for each) in list');
@@ -89,4 +93,18 @@ void main() {
   [1, 2, 3, '4', 5].forEach((element) {
     stdout.write('$element, ');
   });
+  print('\n-------');
+
+  //  for each advanced
+  //  foreach takes an function as argument
+  //  which----
+  //  has return type of void
+  //  has it's own argument of object type
+  //  "print" & "stdout.write" both matches the criteria
+  list.forEach(print);
+  list.forEach(stdout.write);
+  //  map.forEach(print); //  For map it is not possible
+  Set set = {1, 2, 3};
+  set.forEach(print);
+  set.forEach(stdout.write);
 }
