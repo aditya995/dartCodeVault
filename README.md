@@ -1,5 +1,5 @@
 ## git
- - git clone https://github.com/aditya995/dartCodeVault.git     // Downloading files from github repo
+ - git clone ```https://github.com/aditya995/dartCodeVault.git```     // Downloading files from github repo
 
 // Fetching the changes made in Remote repo. If Remote repo's current commit differs from current Local commit and the parent of both commits are same- then it needs to fetche from Remote repo first, then it can push current changes in local commit. First use git pull and then push current changes to Remote repo.
  - git pull
@@ -17,7 +17,7 @@
 
 Connect to a remote github repo--
  - git remote   // to check if it is connected to github remote repository
- - git remote add origin https://github.com/aditya995/dartCodeVault.git 
+ - git remote add origin ```https://github.com/aditya995/dartCodeVault.git``` 
 // To add the origin for this folder to push to that (remote) dartCodeVault repo in github.com
 
  - git branch   // Check the current branch
